@@ -1,0 +1,4 @@
+selenium==3.141.0
+bs4==0.0.1
+requests==2.20.1
+pandas==0.23.4
