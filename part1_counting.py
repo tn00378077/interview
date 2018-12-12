@@ -1,4 +1,5 @@
 import operator
+import re
 
 urls = [
     "http://www.google.com/a.txt",
@@ -20,4 +21,6 @@ for urlTmp in urls:
         scoreTable[filename] = 1
         sorted_by_value = sorted(scoreTable.items(), key=operator.itemgetter(1), reverse=True)
 del sorted_by_value[3:]
-print(sorted_by_value)
+for temp_result in sorted_by_value:
+    # print(temp_result)
+    print(re.sub("['(),]", '', str(temp_result)))
